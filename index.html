@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+        
+        background-image: url(bg.png);
+          background-repeat: no-repeat;
+          background-size: 2025px 825px;
+        
+ 
+      }
+      .div{
+        position: relative;
+        display: flex;
+    flex-direction: column;
+    margin: 15px;
+      }
+
+      #over{
+        width: 533px;
+        height: 95px;
+        border: 1px solid black;
+        box-shadow: 3px rgb(113, 18, 113);
+        border-radius: 8px;
+        background-color: rgb(33, 1, 33);
+        color: wheat;
+        font-size: 35px;
+        padding: 3px;
+        left:50;
+        margin-left: 395px;
+        bottom: 50;
+      }
+      
+          
+          
+         
+      
+      #dino{
+        width: 275px;
+        height: 175px;
+        position: absolute;
+        
+        bottom: 0;
+        left: 0 ;
+      }
+      #dragon{
+            width: 235px;
+            height: 135px;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+           
+        }
+
+        @keyframes rightmovement {
+    from {
+        bottom: 0;
+        right: 0;
+    }
+    to {
+        bottom: 0;
+        right: 1800px; /* Adjust to a smaller value for a gradual shift */
+    }}
+    .jump {
+            animation: jump 1s linear;
+        }
+
+      .rightmovement{
+        animation: rightmovement 1s linear;
+      } 
+
+  
+    @keyframes jump{
+    0%, 100% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 250px; /* Adjust the jump height */
+    }
+}
+      
+        
+      button{
+        width: 87px;
+        height: 35px;
+        padding: 3px;
+        background-color: rgb(23, 2, 23);
+        color: bisque;
+        position: relative;
+      }
+
+        
+    </style>
+</head>
+<body>
+    
+        <div class="div">
+            
+           <h3> Score Card : <p>0</p></h3>
+        </div>
+        <button>Start</button>
+        <button id="over">Lets predict your jump!</button>
+        <img id="dino" src="dino.png" alt=""> <img id="dragon"  src="dragon.png" alt="">
+        <script src="game.js"></script>
+</body>
+</html>
